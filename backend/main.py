@@ -42,7 +42,7 @@ app.add_middleware(
 )
 
 # Path ke model YOLO
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "yolov9.pt")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "yolov9.pt") or os.getenv("MODEL_PATH")
 
 # Load model YOLO
 try:
