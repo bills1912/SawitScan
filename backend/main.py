@@ -42,7 +42,7 @@ app.add_middleware(
 )
 
 # Path ke model YOLO
-MODEL_PATH = "https://github.com/bills1912/SawitScan/raw/refs/heads/main/backend/yolov9.pt"
+MODEL_PATH = "yolov9.pt"
 
 # Load model YOLO
 try:
