@@ -15,6 +15,15 @@ import numpy as np
 import cv2
 from typing import List, Dict, Any
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+# --- 1. KONFIGURASI ENV (FIXED) ---
+# Mengambil path folder backend saat ini
+BACKEND_DIR = Path(__file__).resolve().parent
+# Naik satu level ke root, lalu masuk ke frontend/.env
+ENV_PATH = BACKEND_DIR.parent / 'frontend' / '.env'
+load_dotenv(ENV_PATH)
 
 # Inisialisasi FastAPI
 app = FastAPI(
