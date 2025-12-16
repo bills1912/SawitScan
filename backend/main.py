@@ -65,7 +65,7 @@ ROBOFLOW_MODEL_ID = "palm-fruit-ahuai/3"
 try:
     CLIENT = InferenceHTTPClient(
         api_url="https://serverless.roboflow.com",
-        api_key="CaKJLDG1Q8mLEWjXAZ4B"
+        api_key=ROBOFLOW_API_KEY
     )
     print(f"✅ Roboflow Client initialized for: {ROBOFLOW_MODEL_ID}")
 except Exception as e:
