@@ -243,6 +243,7 @@ def process_detection(image: Image.Image, filename: str) -> Dict[str, Any]:
             detections = []
             class_summary = {}
             annotated_img = ripeness_results[0].plot() # Pakai plotter bawaan
+            annotated_img = cv2.cvtColor(annotated_img, cv2.COLOR_BGR2RGB)
             
             for result in ripeness_results:
                 boxes = result.boxes
