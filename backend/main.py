@@ -19,6 +19,7 @@ from typing import List, Dict, Any
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import uuid
 
 # --- 1. KONFIGURASI ENV & APP ---
 # Mengambil path folder backend saat ini
@@ -192,7 +193,7 @@ def process_detection(image: Image.Image, filename: str) -> Dict[str, Any]:
     """
     
     # 1. Persiapan File Temp untuk Roboflow
-    temp_filename = f"temp_{filename}"
+    temp_filename = f"/tmp/{uuid.uuid4()}.jpg"
     image.save(temp_filename)
     
     try:
